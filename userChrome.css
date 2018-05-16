@@ -1,0 +1,32 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#context_reloadTab,
+#context_toggleMuteTab,
+#context_pinTab,
+#context_unpinTab,
+#context_duplicateTab,
+#context_openTabInWindow,
+#context_sendTabToDevice,
+#context_reloadAllTabs,
+#context_bookmarkAllTabs,
+#context_closeTabsToTheEnd,
+#context_closeOtherTabs,
+#context_undoCloseTab,
+#tabContextMenu menuseparator
+{
+    display: none !important
+}
+
+.tab-close-button
+{
+    display: none !important
+}
+
+.tabbrowser-tab[fadein] {
+    min-width: 150px !important;
+    max-width: 150px !important;
+}
+
+toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js");
+}
