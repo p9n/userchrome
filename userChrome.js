@@ -24,11 +24,11 @@
     init() {
       let self = this;
       ['mousedown', 'mousemove', 'mouseup', 'contextmenu'].forEach(type => {
-        gBrowser.mPanelContainer.addEventListener(type, self, true);
+        gBrowser.tabpanels.addEventListener(type, self, true);
       });
-      gBrowser.mPanelContainer.addEventListener('unload', () => {
+      gBrowser.tabpanels.addEventListener('unload', () => {
         ['mousedown', 'mousemove', 'mouseup', 'contextmenu'].forEach(type => {
-          gBrowser.mPanelContainer.removeEventListener(type, self, true);
+          gBrowser.tabpanels.removeEventListener(type, self, true);
         });
       }, false);
     }
@@ -81,7 +81,7 @@
           }
           if (direction != this.directionChain.charAt(this.directionChain.length - 1)) {
             this.directionChain += direction;
-            XULBrowserWindow.statusTextField.label = this.GESTURES[this.directionChain] ? 'Gesture: ' + this.directionChain + ' ' + this.GESTURES[this.directionChain].name : 'Unknown Gesture:' + this.directionChain;
+            StatusPanel._label = this.GESTURES[this.directionChain] ? 'Gesture: ' + this.directionChain + ' ' + this.GESTURES[this.directionChain].name : 'Unknown Gesture:' + this.directionChain;
           }
         }
         break;
@@ -108,7 +108,7 @@
         this.xdTrailAreaContext = null;
       }
       this.directionChain = '';
-      setTimeout(() => XULBrowserWindow.statusTextField.label = '', 2000);
+      setTimeout(() => StatusPanel._label = '', 2000);
       this.hideFireContext = true;
     }
   };
