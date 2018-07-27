@@ -49,8 +49,8 @@
         break;
       case 'mousemove':
         if (rightClick) {
-          let[subX, subY] = [event.screenX - this.lastX, event.screenY - this.lastY];
-          let[distX, distY] = [(subX > 0 ? subX : (-subX)), (subY > 0 ? subY : (-subY))];
+          let [subX, subY] = [event.screenX - this.lastX, event.screenY - this.lastY];
+          let [distX, distY] = [(subX > 0 ? subX : (-subX)), (subY > 0 ? subY : (-subY))];
           let direction;
           if (distX < 10 && distY < 10) return;
           if (distX > distY) direction = subX < 0 ? 'L' : 'R';
@@ -117,5 +117,5 @@
     window.ucjsMouseGestures = new UcjsMouseGestures();
     ucjsMouseGestures.init();
   }
-})(); 
+})();
 
