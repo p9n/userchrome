@@ -12,7 +12,9 @@
 #context_closeTabsToTheEnd,
 #context_closeOtherTabs,
 #context_undoCloseTab,
-#tabContextMenu menuseparator
+#tabContextMenu menuseparator,
+#context-sep-sendpagetodevice,
+#context-sendpagetodevice
 {
     display: none !important
 }
