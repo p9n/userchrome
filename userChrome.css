@@ -14,12 +14,8 @@
 #context_undoCloseTab,
 #tabContextMenu menuseparator,
 #context-sep-sendpagetodevice,
-#context-sendpagetodevice
-{
-    display: none !important
-}
-
-.tab-close-button
+#context-sendpagetodevice,
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button
 {
     display: none !important
 }
