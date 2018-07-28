@@ -17,7 +17,7 @@
             // The following code executes in the browser context,
             // i.e. chrome://browser/content/browser.xul
             Services.scriptloader.loadSubScriptWithOptions(
-                makeRelativePathURI('mouseGesture.js'),
+                makeRelativePathURI('mouseGestures.js'),
                 {target: window, charset: 'utf-8', ignoreCache: true});
         ]]></constructor>
     </implementation>
