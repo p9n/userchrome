@@ -1,0 +1,20 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.ucjs-mouse-gestures-container {
+  -moz-user-focus: none !important;
+  -moz-user-select: none !important;
+  display: -moz-box !important;
+  box-sizing: border-box !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  background: none !important;
+  opacity: 0.9 !important;
+  position: fixed !important;
+  z-index: 2147483647 !important;
+}

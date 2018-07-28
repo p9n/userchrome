@@ -41,22 +41,7 @@
 
     createTrailArea() {
       let hbox = document.createElement('hbox');
-      hbox.style.setProperty('-moz-user-focus', 'none', 'important');
-      hbox.style.setProperty('-moz-user-select', 'none', 'important');
-      hbox.style.setProperty('display', '-moz-box', 'important');
-      hbox.style.setProperty('box-sizing', 'border-box', 'important');
-      hbox.style.setProperty('pointer-events', 'none', 'important');
-      hbox.style.setProperty('margin', '0', 'important');
-      hbox.style.setProperty('padding', '0', 'important');
-      hbox.style.setProperty('width', '100%', 'important');
-      hbox.style.setProperty('height', '100%', 'important');
-      hbox.style.setProperty('border', 'none', 'important');
-      hbox.style.setProperty('box-shadow', 'none', 'important');
-      hbox.style.setProperty('overflow', 'hidden', 'important');
-      hbox.style.setProperty('background', 'none', 'important');
-      hbox.style.setProperty('opacity', '0.9', 'important');
-      hbox.style.setProperty('position', 'fixed', 'important');
-      hbox.style.setProperty('z-index', '2147483647', 'important');
+      hbox.classList.add('ucjs-mouse-gestures-container');
 
       let canvas = document.createElementNS(
           'http://www.w3.org/1999/xhtml', 'canvas');
@@ -128,7 +113,7 @@
             StatusPanel._label = (this.GESTURES[this.directionChain] ?
                                   'Gesture: ' + this.directionChain + ' ' +
                                       this.GESTURES[this.directionChain].name :
-                                  'Unknown Gesture:' + this.directionChain);
+                                  'Unknown Gesture: ' + this.directionChain);
           }
         }
         break;
