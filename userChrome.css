@@ -17,7 +17,8 @@
 #tabContextMenu menuseparator,
 #context-sep-sendpagetodevice,
 #context-sendpagetodevice,
-#tabbrowser-tabs .tabbrowser-tab .tab-close-button
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button,
+.tabs-newtab-button
 {
     display: none !important
 }
