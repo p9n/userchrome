@@ -5,7 +5,7 @@
    xmlns:xbl="http://www.mozilla.org/xbl">
 
   <binding id="js"
-      extends="chrome://global/content/bindings/toolbarbutton.xml#menu">
+      extends="chrome://global/content/bindings/toolbarbutton.xml#toolbarbutton-badged">
     <implementation>
         <constructor><![CDATA[
             function makeRelativePathURI(name) {
@@ -14,6 +14,7 @@
                   0, absolutePath.lastIndexOf('/'));
               return baseDir + '/' + name;
             }
+            console.log('hi')
             // The following code executes in the browser context,
             // i.e. chrome://browser/content/browser.xul
             Services.scriptloader.loadSubScriptWithOptions(
