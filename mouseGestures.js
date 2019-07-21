@@ -50,9 +50,7 @@ class UcjsMouseGestures {
       context.lineJoin = 'round';
       context.lineCap = 'round';
       context.lineWidth = 3;
-      context.strokeRect(0, 0, window.screen.width, window.screen.height);
     }
-    console.log(canvas);
 
     return canvas;
   }
