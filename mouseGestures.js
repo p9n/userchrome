@@ -38,24 +38,23 @@ class UcjsMouseGestures {
   }
 
   createTrailArea() {
-    let hbox = document.createElement('hbox');
-    hbox.classList.add('ucjs-mouse-gestures-container');
-
     let canvas = document.createElementNS(
         'http://www.w3.org/1999/xhtml', 'canvas');
     canvas.setAttribute('width', window.screen.width);
     canvas.setAttribute('height', window.screen.height);
-    hbox.appendChild(canvas);
 
     let context = canvas.getContext('2d');
+
     if (context) {
       context.strokeStyle = '#0065FF';
       context.lineJoin = 'round';
       context.lineCap = 'round';
       context.lineWidth = 3;
+      context.strokeRect(0, 0, window.screen.width, window.screen.height);
     }
+    console.log(canvas);
 
-    return hbox;
+    return canvas;
   }
 
   handleEvent(event) {
@@ -88,16 +87,16 @@ class UcjsMouseGestures {
               this.xdTrailArea, gBrowser.selectedBrowser.nextSibling);
         }
 
-        let context = this.xdTrailArea.firstChild.getContext('2d');
+        let context = this.xdTrailArea.getContext('2d');
         if (context) {
           this.hideFireContext = true;
           context.beginPath();
           context.moveTo(
-              this.lastX - gBrowser.selectedBrowser.boxObject.screenX,
-              this.lastY - gBrowser.selectedBrowser.boxObject.screenY);
+              this.lastX - gBrowser.selectedBrowser.screenX,
+              this.lastY - gBrowser.selectedBrowser.screenY);
           context.lineTo(
-              event.screenX - gBrowser.selectedBrowser.boxObject.screenX,
-              event.screenY - gBrowser.selectedBrowser.boxObject.screenY);
+              event.screenX - gBrowser.selectedBrowser.screenX,
+              event.screenY - gBrowser.selectedBrowser.screenY);
           context.closePath();
           context.stroke();
           this.lastX = event.screenX;
@@ -146,4 +145,3 @@ if (!window.ucjsMouseGestures) {
   window.ucjsMouseGestures = new UcjsMouseGestures();
   ucjsMouseGestures.init();
 }
-

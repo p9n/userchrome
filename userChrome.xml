@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
-<bindings id="generalBindings"
+<bindings
    xmlns="http://www.mozilla.org/xbl"
    xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
    xmlns:xbl="http://www.mozilla.org/xbl">
 
-  <binding id="js"
-      extends="chrome://global/content/bindings/toolbarbutton.xml#toolbarbutton-badged">
+  <binding id="js">
     <implementation>
         <constructor><![CDATA[
             function makeRelativePathURI(name) {
@@ -14,7 +13,6 @@
                   0, absolutePath.lastIndexOf('/'));
               return baseDir + '/' + name;
             }
-            console.log('hi')
             // The following code executes in the browser context,
             // i.e. chrome://browser/content/browser.xul
             Services.scriptloader.loadSubScriptWithOptions(
@@ -24,4 +22,3 @@
     </implementation>
   </binding>
 </bindings>
-
