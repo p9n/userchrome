@@ -40,8 +40,10 @@ class UcjsMouseGestures {
   createTrailArea() {
     let canvas = document.createElementNS(
         'http://www.w3.org/1999/xhtml', 'canvas');
-    canvas.setAttribute('width', window.screen.width);
-    canvas.setAttribute('height', window.screen.height);
+    const browser = gBrowser.selectedBrowser;
+    canvas.setAttribute('width', browser.clientWidth);
+    canvas.setAttribute('height', browser.clientHeight);
+    canvas.style.position = 'fixed';
 
     let context = canvas.getContext('2d');
 
