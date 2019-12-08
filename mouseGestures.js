@@ -142,6 +142,9 @@ class UcjsMouseGestures {
 };
 
 if (!window.ucjsMouseGestures) {
-  window.ucjsMouseGestures = new UcjsMouseGestures();
-  ucjsMouseGestures.init();
+  /* HACK: wait 0.5s for gBrowser to init */
+  setTimeout(() => {
+    window.ucjsMouseGestures = new UcjsMouseGestures();
+    ucjsMouseGestures.init();
+  }, 500);
 }
