@@ -27,7 +27,7 @@ try {
         let document = aEvent.originalTarget;
         if (document.location && document.location.protocol == 'chrome:') {
           let file = Services.dirsvc.get('UChrm', Ci.nsIFile);
-          file.append('userChrome.js');
+          file.append('mouseGestures.js');
           let fileURL = Services.io.getProtocolHandler('file')
                         .QueryInterface(Ci.nsIFileProtocolHandler)
                         .getURLSpecFromFile(file) + "?" + file.lastModifiedTime;
