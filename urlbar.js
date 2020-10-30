@@ -1,0 +1,1 @@
+UrlbarInput.prototype.startLayoutExtend = function() {}

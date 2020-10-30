@@ -14,6 +14,11 @@ try {
     Cu.import('resource://gre/modules/Services.jsm');
     Cu.import('resource://gre/modules/osfile.jsm');
 
+    const scripts = [
+      'mouseGestures.js',
+      'urlbar.js',
+    ];
+
     function UserChrome_js() {
       Services.obs.addObserver(this, 'domwindowopened', false);
     };
@@ -26,12 +31,14 @@ try {
       handleEvent: function (aEvent) {
         let document = aEvent.originalTarget;
         if (document.location && document.location.protocol == 'chrome:') {
-          let file = Services.dirsvc.get('UChrm', Ci.nsIFile);
-          file.append('mouseGestures.js');
-          let fileURL = Services.io.getProtocolHandler('file')
-                        .QueryInterface(Ci.nsIFileProtocolHandler)
-                        .getURLSpecFromFile(file) + "?" + file.lastModifiedTime;
-          Services.scriptloader.loadSubScript(fileURL, document.defaultView, 'UTF-8');
+          for (const script of scripts) {
+            let file = Services.dirsvc.get('UChrm', Ci.nsIFile);
+            file.append(script);
+            let fileURL = Services.io.getProtocolHandler('file')
+                          .QueryInterface(Ci.nsIFileProtocolHandler)
+                          .getURLSpecFromFile(file) + "?" + file.lastModifiedTime;
+            Services.scriptloader.loadSubScript(fileURL, document.defaultView, 'UTF-8');
+          }
         }
       },
     };
