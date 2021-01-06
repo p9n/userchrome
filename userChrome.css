@@ -22,7 +22,7 @@
     display: none !important
 }
 
-.tabbrowser-tab[fadein] {
+.tabbrowser-tab[fadein]:not([pinned]) {
     min-width: 150px !important;
     max-width: 150px !important;
 }
