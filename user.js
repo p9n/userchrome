@@ -1,4 +1,5 @@
 /* open everything in new tab */
+user_pref("browser.search.openintab", true);
 user_pref("browser.tabs.loadBookmarksInTabs", true);
 user_pref("browser.urlbar.openintab", true);
 
@@ -20,3 +21,6 @@ user_pref("permissions.default.desktop-notification", 2);
 
 /* block gps */
 user_pref("permissions.default.geo", 2);
+
+/* enable userchrome.css */
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
