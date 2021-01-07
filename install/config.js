@@ -40,7 +40,3 @@ try {
       new UserChrome_js();
 
 } catch(ex) {};
-
-try {
-    pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-} catch(e) {}
