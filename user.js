@@ -24,3 +24,19 @@ user_pref("permissions.default.geo", 2);
 
 /* enable userchrome.css */
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
+/* support mouse gesture in non-windows */
+user_pref("ui.context_menus.after_mouseup", true);
+
+/* domain whitelist for internal sites */
+user_pref("browser.fixup.domainwhitelist.b", true);
+user_pref("browser.fixup.domainwhitelist.c", true);
+user_pref("browser.fixup.domainwhitelist.cl", true);
+user_pref("browser.fixup.domainwhitelist.crrev", true);
+user_pref("browser.fixup.domainwhitelist.cs", true);
+user_pref("browser.fixup.domainwhitelist.g", true);
+user_pref("browser.fixup.domainwhitelist.go", true);
+user_pref("browser.fixup.domainwhitelist.m", true);
+user_pref("browser.fixup.domainwhitelist.moma", true);
+user_pref("browser.fixup.domainwhitelist.t", true);
+user_pref("browser.fixup.domainwhitelist.who", true);
