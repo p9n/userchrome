@@ -40,3 +40,6 @@ user_pref("browser.fixup.domainwhitelist.m", true);
 user_pref("browser.fixup.domainwhitelist.moma", true);
 user_pref("browser.fixup.domainwhitelist.t", true);
 user_pref("browser.fixup.domainwhitelist.who", true);
+
+/* disable dragging to new window */
+user_pref("browser.tabs.allowTabDetach", false);
