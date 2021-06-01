@@ -1,5 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#context_openANewTab,
 #context_reloadTab,
 #context_toggleMuteTab,
 #context_pinTab,
@@ -25,4 +26,40 @@
 .tabbrowser-tab[fadein]:not([pinned]) {
     min-width: 150px !important;
     max-width: 150px !important;
+}
+
+/*** Proton Tabs Tweaks ***/
+
+#tabbrowser-tabs {
+    --user-tab-rounding: 4px;
+}
+@media (-moz-proton) {
+    .tab-background {
+        border-radius: var(--user-tab-rounding) var(--user-tab-rounding)
+                       0px 0px !important;
+        margin-block: 1px 0 !important;
+    }
+}
+
+/* Inactive tabs: Outline style */
+
+@media (-moz-proton) {
+    .tab-background:not([selected=true]):not([multiselected=true]) {
+        border: 1px solid
+                var(--lwt-selected-tab-background-color,
+                    rgba(255, 255, 255, .20))
+                !important;
+    }
+    /* Remove extra padding between tabs */
+    .tabbrowser-tab {
+        padding-left: 0 !important;
+    }
+
+    #TabsToolbar {
+        background-color: var(--lwt-toolbar-field-background-color,
+                              hsla(0, 0%, 100%, .8));
+        background-image: none !important;
+        color: var(--lwt-tab-text, var(--toolbar-color)) !important;
+    }
+
 }
