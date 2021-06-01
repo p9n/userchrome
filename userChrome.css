@@ -55,7 +55,7 @@
         padding-left: 0 !important;
     }
 
-    #TabsToolbar {
+    #TabsToolbar-customization-target {
         background-color: var(--lwt-toolbar-field-background-color,
                               hsla(0, 0%, 100%, .8));
         background-image: none !important;
