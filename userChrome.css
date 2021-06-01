@@ -49,17 +49,65 @@
                 var(--lwt-selected-tab-background-color,
                     rgba(255, 255, 255, .20))
                 !important;
+        background-color: var(--lwt-toolbar-field-background-color,
+                              hsla(0, 0%, 100%, .8)) !important;
     }
     /* Remove extra padding between tabs */
     .tabbrowser-tab {
         padding-left: 0 !important;
-    }
-
-    #TabsToolbar {
-        background-color: var(--lwt-toolbar-field-background-color,
-                              hsla(0, 0%, 100%, .8));
-        background-image: none !important;
         color: var(--lwt-tab-text, var(--toolbar-color)) !important;
     }
 
+    /* restore non-proton sound icon */
+    .tab-icon-image {
+        opacity: 1.0 !important;
+    }
+
+    .tab-icon-overlay {
+        display: none !important;
+    }
+
+    .tab-icon-sound {
+      filter: invert(1);
+    }
+
+    .tab-icon-sound[soundplaying],
+    .tab-icon-sound[muted],
+    .tab-icon-sound[activemedia-blocked] {
+        list-style-image: url(chrome://global/skin/media/audio.svg);
+        display: initial !important;
+    }
+
+    .tab-icon-sound[muted] {
+        list-style-image: url(chrome://global/skin/media/audio-muted.svg);
+    }
+
+    .tab-icon-sound[activemedia-blocked] {
+        list-style-image:
+            url(chrome://browser/skin/tabbrowser/tab-audio-blocked.svg);
+    }
+
+    .tab-icon-sound[pictureinpicture] {
+        list-style-image: 
+            url(chrome://global/skin/media/picture-in-picture-open.svg);
+        width: 14px;
+        height: 14px;
+        opacity: .8;
+    }
+
+    .tab-icon-sound[pictureinpicture]:-moz-locale-dir(rtl) {
+        transform: scaleX(-1);
+    }
+
+    .tab-icon-sound[soundplaying]:not(:hover),
+    .tab-icon-sound[muted]:not(:hover),
+    .tab-icon-sound[activemedia-blocked]:not(:hover) {
+        opacity: .8;
+    }
+
+    .tab-icon-sound[soundplaying-scheduledremoval]:not([muted], :hover),
+    .tab-icon-overlay[soundplaying-scheduledremoval]:not([muted], :hover) {
+        transition: opacity .3s linear var(--soundplaying-removal-delay);
+        opacity: 0;
+    }
 }
