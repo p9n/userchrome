@@ -30,13 +30,10 @@
 
 /*** Proton Tabs Tweaks ***/
 
-:root {
-    --tab-min-height: 30px !important;
-}
-
 @media (-moz-proton) {
     #tabbrowser-tabs {
         --user-tab-rounding: 4px;
+        --tab-min-height: 30px;
     }
 
     .tab-background {
