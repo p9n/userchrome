@@ -35,6 +35,10 @@
         --user-tab-rounding: 4px;
         --tab-min-height: 30px;
     }
+    
+    #scrollbutton-up, #scrollbutton-down {
+        --toolbarbutton-inner-padding: 7px;  /* (--tab-min-height - 16) / 2 */
+    }
 
     .tab-background {
         border-radius: var(--user-tab-rounding) var(--user-tab-rounding)
