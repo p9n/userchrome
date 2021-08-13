@@ -36,7 +36,7 @@ try {
             file.append(script);
             let fileURL = Services.io.getProtocolHandler('file')
                           .QueryInterface(Ci.nsIFileProtocolHandler)
-                          .getURLSpecFromFile(file) + "?" + file.lastModifiedTime;
+                          .getURLSpecFromActualFile(file) + "?" + file.lastModifiedTime;
             Services.scriptloader.loadSubScript(fileURL, document.defaultView, 'UTF-8');
           }
         }
