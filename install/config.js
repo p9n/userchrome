@@ -16,7 +16,6 @@ try {
 
     const scripts = [
       'mouseGestures.js',
-      'urlbar.js',
     ];
 
     function UserChrome_js() {
