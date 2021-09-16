@@ -5,11 +5,19 @@ user_pref("browser.urlbar.openintab", true);
 
 /* disable url bar suggestions */
 user_pref("browser.urlbar.maxRichResults", 0);
+user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
 user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.engine", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.quicksuggest", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.topsites", false);
+
+/* diable url bar shortcut */
+user_pref("browser.urlbar.shortcuts.bookmarks", false);
+user_pref("browser.urlbar.shortcuts.history", false);
+user_pref("browser.urlbar.shortcuts.tabs", false);
 
 /* block video autoplay */
 user_pref("media.autoplay.blocking_policy", 2);
@@ -42,4 +50,7 @@ user_pref("browser.fixup.domainwhitelist.t", true);
 user_pref("browser.fixup.domainwhitelist.who", true);
 
 /* disable dragging to new window */
+user_pref("browser.tabs.allowTabDetach", false);
+
+/* disallow tab detach */
 user_pref("browser.tabs.allowTabDetach", false);
