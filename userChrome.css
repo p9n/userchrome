@@ -20,7 +20,9 @@
 #context-sendpagetodevice,
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button,
 .tabs-newtab-button,
-#star-button-box /* bookmark button on url bar */
+#star-button-box, /* bookmark button on url bar */
+#context-navigation, /* context menu items */
+#context-sep-navigation
 {
     display: none !important
 }
