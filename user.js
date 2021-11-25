@@ -52,5 +52,6 @@ user_pref("browser.fixup.domainwhitelist.who", true);
 /* disable dragging to new window */
 user_pref("browser.tabs.allowTabDetach", false);
 
-/* disallow tab detach */
-user_pref("browser.tabs.allowTabDetach", false);
+/* Confirm before quitting */
+user_pref("browser.warnOnQuit", true);
+user_pref("browser.warnOnQuitShortcut", true);
