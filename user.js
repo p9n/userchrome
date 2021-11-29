@@ -7,7 +7,7 @@ user_pref("browser.urlbar.openintab", true);
 user_pref("browser.urlbar.maxRichResults", 0);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
 user_pref("browser.urlbar.suggest.bookmark", false);
-user_pref("browser.urlbar.suggest.engine", false);
+user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("browser.urlbar.suggest.quicksuggest", false);
