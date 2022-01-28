@@ -55,3 +55,6 @@ user_pref("browser.tabs.allowTabDetach", false);
 /* Confirm before quitting */
 user_pref("browser.warnOnQuit", true);
 user_pref("browser.warnOnQuitShortcut", true);
+
+/* disable url prefix suffix auto fix */
+user_pref("browser.fixup.alternate.enabled", false);
