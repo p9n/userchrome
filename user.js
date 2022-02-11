@@ -58,3 +58,9 @@ user_pref("browser.warnOnQuitShortcut", true);
 
 /* disable url prefix suffix auto fix */
 user_pref("browser.fixup.alternate.enabled", false);
+
+/*
+ * https://bugzilla.mozilla.org/show_bug.cgi?id=1712734
+ * disable native context menu on macos
+ */
+user_pref("widget.macos.native-context-menus", false);
