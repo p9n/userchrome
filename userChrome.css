@@ -72,8 +72,8 @@
 }
 
 /* better sound icon */
-.tab-icon-image:not([pinned]) {
-    opacity: 1 !important
+*|img.tab-icon-image {
+    opacity: 1 !important;
 }
 
 .tab-icon-overlay:not([crashed]),
