@@ -1,4 +1,5 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 #context_openANewTab,
 #context_reloadTab,
@@ -72,7 +73,7 @@
 }
 
 /* better sound icon */
-*|img.tab-icon-image {
+html|*.tab-icon-image {
     opacity: 1 !important;
 }
 
