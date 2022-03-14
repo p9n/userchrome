@@ -16,6 +16,7 @@ try {
 
     const scripts = [
       'mouseGestures.js',
+      'hotkey.js',
     ];
 
     function UserChrome_js() {
