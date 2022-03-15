@@ -64,3 +64,6 @@ user_pref("browser.fixup.alternate.enabled", false);
  * disable native context menu on macos
  */
 user_pref("widget.macos.native-context-menus", false);
+
+/* disable download panel popup */
+user_pref("browser.download.alwaysOpenPanel", false);
