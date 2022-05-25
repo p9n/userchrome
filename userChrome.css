@@ -4,8 +4,6 @@
 #context_openANewTab,
 #context_reloadTab,
 #context_toggleMuteTab,
-#context_pinTab,
-#context_unpinTab,
 #context_duplicateTab,
 #context_selectAllTabs,
 #context_bookmarkTab,
@@ -25,12 +23,25 @@
 #context-navigation, /* context menu items */
 #context-sep-navigation
 {
-    display: none !important
+    display: none !important;
 }
 
-.tabbrowser-tab[fadein]:not([pinned]) {
-    min-width: 150px !important;
-    max-width: 150px !important;
+@media (-moz-platform: linux) {
+    .tabbrowser-tab[fadein]:not([pinned]) {
+        min-width: 100px !important;
+        max-width: 100px !important;
+    }
+}
+@media not (-moz-platform: linux) {
+    #context_pinTab,
+    #context_unpinTab {
+        display: none !important;
+    }
+
+    .tabbrowser-tab[fadein]:not([pinned]) {
+        min-width: 100px !important;
+        max-width: 100px !important;
+    }
 }
 
 /*** Proton Tabs Tweaks ***/
