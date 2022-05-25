@@ -17,7 +17,7 @@ class UcjsMouseGestures {
       'DR': {name: 'Close Window',
              cmd: () => document.getElementById('cmd_closeWindow')
                 .doCommand()},
-      'LD': {name: 'Close Tab', cmd: () => gBrowser.removeCurrentTab()},
+      'LD': {name: 'Close Tab', cmd: () => this.removeCurrentTab()},
 
       'LR': {name: 'Previous Tab',
              cmd: () => gBrowser.tabContainer.advanceSelectedTab(-1, true)},
@@ -138,6 +138,11 @@ class UcjsMouseGestures {
     this.directionChain = '';
     setTimeout(() => StatusPanel._label = '', 2000);
     this.hideFireContext = true;
+  }
+
+  removeCurrentTab() {
+    if (!gBrowser.selectedTab.pinned)
+      gBrowser.removeCurrentTab();
   }
 };
 
