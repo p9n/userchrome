@@ -64,3 +64,6 @@ user_pref("browser.fixup.alternate.enabled", false);
  * disable native context menu on macos
  */
 user_pref("widget.macos.native-context-menus", false);
+
+/* disable TSF for win10 */
+user_pref("intl.tsf.enabled", false);
