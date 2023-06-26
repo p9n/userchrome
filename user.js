@@ -67,3 +67,6 @@ user_pref("widget.macos.native-context-menus", false);
 
 /* disable download panel popup */
 user_pref("browser.download.alwaysOpenPanel", false);
+
+/* disable TSF for win10 */
+user_pref("intl.tsf.enabled", false);
