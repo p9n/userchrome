@@ -12,7 +12,6 @@ try {
     } = Components;
 
     Cu.import('resource://gre/modules/Services.jsm');
-    Cu.import('resource://gre/modules/osfile.jsm');
 
     const scripts = [
       'mouseGestures.js',
