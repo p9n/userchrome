@@ -11,8 +11,6 @@ try {
       utils: Cu
     } = Components;
 
-    Cu.import('resource://gre/modules/Services.jsm');
-
     const scripts = [
       'mouseGestures.js',
       'hotkey.js',
