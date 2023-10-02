@@ -66,14 +66,13 @@
     margin-block: 1px 0 !important;
 }
 
-.tab-background:not([selected=true]):not([multiselected=true]) {
+.tab-background {
     border: 1px solid var(--lwt-selected-tab-background-color) !important;
     background-color: var(--button-hover-bgcolor) !important;
     background-image: initial !important;
 }
-.tab-background:is([selected], [multiselect]) {
+.tabbrowser-tab:is([selected], [multiselect]) .tab-background {
     background-color: var(--button-bgcolor) !important;
-    background-image: initial !important;
 }
 
 /* Remove extra padding between tabs */
