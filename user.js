@@ -70,3 +70,6 @@ user_pref("browser.download.alwaysOpenPanel", false);
 
 /* disable TSF for win10 */
 user_pref("intl.tsf.enabled", false);
+
+/* Allow client certs on CORS preflight */
+user_perf("network.cors_preflight.allow_client_cert", true);
