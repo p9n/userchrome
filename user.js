@@ -73,3 +73,7 @@ user_pref("intl.tsf.enabled", false);
 
 /* Allow client certs on CORS preflight */
 user_perf("network.cors_preflight.allow_client_cert", true);
+
+/* Hide tab preview */
+user_pref("browser.tabs.hoverPreview.enabled", false);
+user_pref("browser.tabs.hoverPreview.showThumbnails", false);
